@@ -1,10 +1,4 @@
-const { I } = inject();
-let actionwords;
-
-Before(() => {
-    actionwords = Object.create(require('./actionwords.js')).Actionwords;
-});
-
+let actionwords = require('./actionwords.js').Actionwords;;
 
 When(/^I start the coffee machine using language "(.*)"$/, function (lang) {
     return actionwords.iStartTheCoffeeMachineUsingLanguageLang(lang);
